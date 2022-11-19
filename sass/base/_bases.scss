@@ -1,0 +1,63 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--text-color-primary);
+
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, p, ul {
+    margin: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @include mobile {
+        width: 480px;
+    }
+
+    @include tablet {
+    width: 768px;
+    }
+
+    @include desktop {
+    width: 1200px;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    @include desktop {
+        gap: 94px;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
